@@ -30,6 +30,7 @@
         "views/menu_views.xml",
         "data/openacademy_data.xml",
         "views/sale_order_view.xml",
+        "views/wizard_view.xml",
     ],
     # only loaded in demonstration mode
     'demo':        [],

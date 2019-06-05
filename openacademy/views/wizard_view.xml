@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <act_window id="student_wizard_action" name="Course Level" res_model="openacademy.wizard"
+                src_model="openacademy.course" view_mode="form" target="new" key2="client_action_multi"/>
+    
+    <record id="level_wizard_view" model="ir.ui.view">
+        <field name="name">Course View</field>
+        <field name="model">openacademy.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="course_ids" widget="many2many_list"/>
+                    <field name="level"/>
+                </group>
+                <footer>
+                    <button name="set_course_level" string="Update Level" class="oe_right oe_highlight"
+                            type="object"/>
+                    <button string="Cancel" class="oe_right" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
