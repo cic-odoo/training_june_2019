@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <act_window id="course_wizard_action"
+        name ="Course Level" 
+        res_model="open_academy.wizard"
+        src_model="open_academy.course" 
+        view_mode="form" 
+        target="new" 
+        key2="client_action_multi"/>
+    
+    <record id="wizard_level_course_view" model="ir.ui.view">
+        <field name="name">Wizard Level</field>
+        <field name="model">open_academy.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="course_ids" widget="many2many_list"/>
+                    <field name="level"/>
+                </group>
+                <footer>
+                    <button name="set_level" string="Change Level" class="btn-primary" type="object"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
