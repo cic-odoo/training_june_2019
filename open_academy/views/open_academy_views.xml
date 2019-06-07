@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record model="ir.ui.view" id="course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">open_academy.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="level"/>
+                        </group>
+                        <group>
+                            <field name="create_date"/>
+                        </group>
+                         <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="About">
+                                <p>Hello World</p>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">course.search</field>
+            <field name="model">open_academy.course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="level"/>
+                    <filter name="easy_courses" string="Easy Difficulty"
+                            domain="[('level', '=', 'easy')]"/>
+                    <group string="Group By">
+                        <filter name="by_difficulty" string="Difficulty"
+                                context="{'group_by': 'level'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+   
+        
+</odoo>

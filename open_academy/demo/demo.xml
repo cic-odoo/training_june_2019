@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        
+        <record model="open_academy.course" id="course_math_101">
+            <field name="name">Math 101</field>
+            <field name="level">easy</field>
+        </record>
+        
+        <record model="open_academy.course" id="course_eng_101">
+            <field name="name">English 101</field>
+            <field name="level">easy</field>
+        </record>
+        
+        <record model="open_academy.course" id="course_psy_101">
+            <field name="name">Psychology 101</field>
+            <field name="level">easy</field>
+        </record>
+        
+        <record model="open_academy.person" id="person_gautham">
+            <field name="first_name">Gautham</field>
+            <field name="last_name">Yerroju</field>
+        </record>
+        
+    </data>
+</odoo>
