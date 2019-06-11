@@ -14,3 +14,4 @@ class Course(models.Model):
     ], string='Difficulty')
     
     description = fields.Text(string="Description")
+    

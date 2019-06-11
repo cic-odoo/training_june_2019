@@ -33,6 +33,7 @@
         'views/sale_order_inherit.xml',
         'reports/sale_order_reports_inherit.xml',
         'views/wizard.xml',
+        'security/security.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
